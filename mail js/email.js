@@ -7,8 +7,10 @@
 let emailUtente = prompt("inserisci la tua Email")
 // console.log(emailUtente);
 
+let verifica = false
+
 // creo una lista di email valide utilizzando un array
-const emailValide = [
+let emailValide = [
     "damiano@gmail.com",
     "luca@gmail.com",
     "gino@gmail.com",
@@ -19,9 +21,17 @@ const emailValide = [
 // console.log(emailValide);
 
 
-// se l'email è nella lista allora stampo
-// // if(emailUtente = emailValide){
-//     console.log("Email valida")
+for (i = 0; i < emailValide.length; i++) {
+    if (emailValide[i] == emailUtente) {
+        verifica = true
+    }
+    
+}
 
-// }
+if (verifica == true) {
+    console.log("puoi accedere")
+}
 
+else {
+    console.log("non puoi accedere")
+}
